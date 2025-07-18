@@ -4,113 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Excusinator</title>
-
-<!-- SEO Meta Tags -->
-<meta name="description" content="Ridiculously overcomplicated excuses for everyday letdowns.">
-
-<!-- Open Graph Tags (for Facebook, LinkedIn, etc.) -->
-<meta property="og:image" content="The Excusinator" />
-<meta property="og:description" content="Ridiculously overcomplicated excuses for everyday letdowns." />
-<meta property="og:url" content="https://theexcusinator.com" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://theexcusinator.com/og-image.png" />
-
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Excusinator" />
-<meta name="twitter:description" content="Ridiculously overcomplicated excuses for everyday letdowns." />
-<meta name="twitter:image" content="https://theexcusinator.com/og-image.png" />
-
   <link rel="icon" href="/favicon-v1.ico" type="image/x-icon">
- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Manrope', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+      font-family: 'Space Mono', monospace;
+      background: #ffffff;
+      color: #000000;
       overflow-x: hidden;
     }
     header {
-      height: auto;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(to right, #000000, #1f1f1f);
       padding: 4rem 2rem;
     }
     header h1 {
       font-size: 4rem;
       margin: 0;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-top: 1rem;
-      color: #aaa;
+      color: #444;
+      letter-spacing: 0.5px;
     }
     .button {
       margin-top: 2rem;
       padding: 1rem 2rem;
-      background-color: #fff;
-      color: #000;
+      background-color: #000;
+      color: #fff;
       border: none;
       font-size: 1rem;
       font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Space Mono', monospace;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     .button:hover {
-      background-color: #ff4d4d;
-      color: #fff;
-    }
-    section {
-      padding: 4rem 2rem;
-      text-align: center;
+      background-color: #ff3b30;
     }
     .excuse-box {
-      background: #1a1a1a;
+      background: #f0f0f0;
       padding: 2rem;
-      margin: 2rem auto;
+      margin-top: 2rem;
       max-width: 700px;
-      border-left: 5px solid #ff4d4d;
-      font-size: 1.5rem;
+      width: 100%;
+      border: 2px solid #000;
+      font-size: 1.2rem;
       line-height: 1.6;
+      text-align: left;
+      color: #111;
+      font-family: 'Space Mono', monospace;
     }
     footer {
       padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #777;
+      color: #999;
     }
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <h1>The Excusinator</h1>
-      <p>Ridiculously overthought reasons for everyday letdowns.</p>
-      <button class="button" onclick="generateExcuse()">Generate an Excuse</button>
+    <!-- Optional pictogram placeholder -->
+    <img src="/pictogram.png" alt="The Excusinator Icon" width="80" style="margin-bottom: 1rem;" />
 
-      <div id="excuseContainer" class="excuse-box" style="display:none;">
+    <h1>The Excusinator</h1>
+    <p>Ridiculously overthought reasons for everyday letdowns.</p>
+    <button class="button" onclick="generateExcuse()">Generate New Excuse</button>
+
+    <div id="excuseContainer" class="excuse-box" style="display:none;">
       <p id="excuseText"></p>
-    </div>
-  
     </div>
   </header>
 
-
   <footer>
-    <p>&copy; 2025 The Excusinator. All rights dramatically exaggerated.</p>
+    <p>&copy; 2025 The Excusinator. All excuses fabricated with unnecessary effort.</p>
     <p>&copy; Part of the CantRightNow.com suite of underwhelming digital solutions.  
 Follow us. Or don’t. Honestly, we get it.</p>
+
   </footer>
 
   <script>
