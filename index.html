@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Excusinator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to right, #000000, #1f1f1f);
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #aaa;
+    }
+    .button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #ff4d4d;
+      color: #fff;
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .excuse-box {
+      background: #1a1a1a;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 700px;
+      border-left: 5px solid #ff4d4d;
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>The Excusinator</h1>
+      <p>Ridiculously overthought reasons for everyday letdowns.</p>
+      <button class="button" onclick="generateExcuse()">Generate an Excuse</button>
+    </div>
+  </header>
+
+  <section>
+    <div id="excuseContainer" class="excuse-box" style="display:none;">
+      <p id="excuseText"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Excusinator. All rights dramatically exaggerated.</p>
+    <p>&copy; Part of the CantRightNow.com suite of underwhelming digital solutions.  
+Follow us. Or don’t. Honestly, we get it.</p>
+  </footer>
+
+  <script>
+    const excuses = [
+      "Unfortunately, I've been asked to be the emergency understudy for a street magician performing at a corporate retreat in Milton Keynes. It involves blindfolds, mild hypnosis, and a ferret.",
+      "I can't make it tonight because I’ve been summoned by my neighbourhood council to chair an emergency meeting about the ethical implications of drone-delivered pizza.",
+      "I was fully intending to show up until I discovered a rogue AI in my smart fridge staging a protest against my almond milk consumption.",
+      "My cat joined a pyramid scheme for gourmet tuna and I’ve been on Zoom all morning trying to recover our savings.",
+      "I’ve just been cast as a background extra in a Swedish noir drama about IKEA conspiracy theories. It’s unpaid but artistically vital."
+    ];
+
+    function generateExcuse() {
+      const container = document.getElementById('excuseContainer');
+      const text = document.getElementById('excuseText');
+      const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+      text.textContent = randomExcuse;
+      container.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
