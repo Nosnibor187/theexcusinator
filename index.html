@@ -139,30 +139,34 @@
     }
   }
   </style>
-</head>
- <div style="text-align: center; margin-top: 2rem;">
-  <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <!-- Machine body -->
-    <rect x="10" y="40" width="100" height="60" rx="8" fill="black" />
-    
-    <!-- Paper (animated) -->
-    <rect id="paper" x="35" y="20" width="50" height="30" fill="white" rx="2" />
-    
-    <!-- Paper lines -->
-    <line x1="40" y1="28" x2="75" y2="28" stroke="black" stroke-width="1.5"/>
-    <line x1="40" y1="34" x2="75" y2="34" stroke="black" stroke-width="1.5"/>
-    <line x1="40" y1="40" x2="75" y2="40" stroke="black" stroke-width="1.5"/>
+ </head>
+  <div style="text-align: center; margin-top: 2rem;">
+   <svg width="180" height="160" viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+     <!-- Machine Base -->
+     <path d="M20 70 Q25 60, 40 50 L140 50 Q155 60, 160 70 L160 120 Q160 130, 150 130 L30 130 Q20 130, 20 120 Z" fill="black" />
 
-    <!-- Animate paper sliding in and out -->
-    <animate 
-      xlink:href="#paper"
-      attributeName="y"
-      values="20;35;20"
-      dur="4s"
-      repeatCount="indefinite"
-    />
-  </svg>
- </div>
+     <!-- Buttons -->
+     <circle cx="45" cy="100" r="6" fill="white" />
+     <circle cx="65" cy="100" r="4" fill="white" />
+     <circle cx="85" cy="100" r="4" fill="white" />
+     <rect x="105" y="96" width="8" height="8" fill="white" />
+
+     <!-- Paper -->
+     <g>
+      <rect id="paper" x="55" y="20" width="70" height="40" rx="3" fill="white" />
+      <line x1="60" y1="30" x2="120" y2="30" stroke="black" stroke-width="2"/>
+      <line x1="60" y1="37" x2="120" y2="37" stroke="black" stroke-width="2"/>
+      <line x1="60" y1="44" x2="120" y2="44" stroke="black" stroke-width="2"/>
+      <animate 
+        xlink:href="#paper"
+        attributeName="y"
+        values="20;35;20"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+     </g>
+   </svg>
+  </div>
   <header>
   
     <h1>The Excusinator</h1>
