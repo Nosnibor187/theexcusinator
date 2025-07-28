@@ -145,7 +145,31 @@
   </header>
 
   <div style="text-align: center; margin-top: 4rem;">
-     <img src="logo-footer.png" alt="Cant Right Now Logo" class="logo-spin" style="width: 80px; opacity: 0.8;" />
+   <svg width="100" height="60" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- Stylized Eye (base circle) -->
+    <circle cx="20" cy="30" r="12" fill="black" />
+    
+    <!-- Eye pupil -->
+    <circle cx="20" cy="30" r="5" fill="white" />
+
+    <!-- Lid overlay to blink -->
+    <rect id="eyelid" x="8" y="18" width="24" height="24" fill="white">
+      <animate attributeName="height"
+               values="24;1;24"
+               dur="6s"
+               repeatCount="indefinite"
+               begin="0s" />
+      <animate attributeName="y"
+               values="18;30;18"
+               dur="6s"
+               repeatCount="indefinite"
+               begin="0s" />
+    </rect>
+
+    <!-- Comedic abstract shape (upper right shape) -->
+    <path d="M40,10 Q60,-10 80,10 L90,10 L60,40" stroke="black" stroke-width="8" fill="none" stroke-linecap="round" />
+
+   </svg>
   </div>
 
   <footer>
@@ -197,6 +221,7 @@
       "I followed a thought too far and ended up in a metaphorical lay-by eating crisps with destiny.",
       "I was kidnapped by my own hopes and dreams, who turned out to be quite passive-aggressive.",
       "I became emotionally entangled with a deck chair and needed closure.",
+      "I'm stuck in a group chat with a group of hormonal Karen's.",
     ];
 
     function generateExcuse() {
