@@ -141,6 +141,30 @@
   </style>
 </head>
 <body>
+  <div style="text-align: center; margin-top: 2rem;">
+   <svg width="160" height="160" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Machine base -->
+    <rect x="40" y="80" width="120" height="60" rx="10" fill="black" />
+    <circle cx="60" cy="110" r="8" fill="white" />
+    <circle cx="80" cy="110" r="5" fill="white" />
+    <circle cx="100" cy="110" r="5" fill="white" />
+    <rect x="120" y="105" width="10" height="10" fill="white" />
+
+    <!-- Paper (animated) -->
+    <rect id="paper" x="70" y="40" width="60" height="40" rx="5" fill="white" />
+    <line x1="75" y1="50" x2="125" y2="50" stroke="black" stroke-width="2"/>
+    <line x1="75" y1="58" x2="125" y2="58" stroke="black" stroke-width="2"/>
+    <line x1="75" y1="66" x2="125" y2="66" stroke="black" stroke-width="2"/>
+
+    <animate 
+      xlink:href="#paper"
+      attributeName="y"
+      values="40;30;40"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+    </svg>
+  </div>
   <header>
   
     <h1>The Excusinator</h1>
