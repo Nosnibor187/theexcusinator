@@ -140,31 +140,29 @@
   }
   </style>
 </head>
-<body>
-  <div style="text-align: center; margin-top: 2rem;">
-   <svg width="160" height="160" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <!-- Machine base -->
-    <rect x="40" y="80" width="120" height="60" rx="10" fill="black" />
-    <circle cx="60" cy="110" r="8" fill="white" />
-    <circle cx="80" cy="110" r="5" fill="white" />
-    <circle cx="100" cy="110" r="5" fill="white" />
-    <rect x="120" y="105" width="10" height="10" fill="white" />
-
+ <div style="text-align: center; margin-top: 2rem;">
+  <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <!-- Machine body -->
+    <rect x="10" y="40" width="100" height="60" rx="8" fill="black" />
+    
     <!-- Paper (animated) -->
-    <rect id="paper" x="70" y="40" width="60" height="40" rx="5" fill="white" />
-    <line x1="75" y1="50" x2="125" y2="50" stroke="black" stroke-width="2"/>
-    <line x1="75" y1="58" x2="125" y2="58" stroke="black" stroke-width="2"/>
-    <line x1="75" y1="66" x2="125" y2="66" stroke="black" stroke-width="2"/>
+    <rect id="paper" x="35" y="20" width="50" height="30" fill="white" rx="2" />
+    
+    <!-- Paper lines -->
+    <line x1="40" y1="28" x2="75" y2="28" stroke="black" stroke-width="1.5"/>
+    <line x1="40" y1="34" x2="75" y2="34" stroke="black" stroke-width="1.5"/>
+    <line x1="40" y1="40" x2="75" y2="40" stroke="black" stroke-width="1.5"/>
 
+    <!-- Animate paper sliding in and out -->
     <animate 
       xlink:href="#paper"
       attributeName="y"
-      values="40;30;40"
-      dur="3s"
+      values="20;35;20"
+      dur="4s"
       repeatCount="indefinite"
     />
-    </svg>
-  </div>
+  </svg>
+ </div>
   <header>
   
     <h1>The Excusinator</h1>
